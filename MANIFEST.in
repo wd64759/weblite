@@ -1,0 +1,3 @@
+graft weblite/templates
+graft weblite/static
+include weblite/db/mydb.db

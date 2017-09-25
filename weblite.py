@@ -3,7 +3,7 @@
 import os
 import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort,\
-render_template, flash
+render_template, flash, send_from_directory
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -16,6 +16,14 @@ app.config.update(dict(
 ))
 app.config.from_envvar('server_settings', silent=True)
 
+@app.route('/pages/<path>')
+def send_page(path):
+	print('get your request {}'.format(path))
+	return send_from_directory('pages', path)
+
+@app.route('/js/<path>')
+def send_js(path):
+	return send_from_directory('js', path)
 
 def connect_db():
 	""" Connects to the specific database."""
@@ -68,6 +76,7 @@ def add_entry():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+	print('login page request')
 	error = None
 	if request.method == 'POST':
 		if request.form['username'] != app.config['USERNAME']:

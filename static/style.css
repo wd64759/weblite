@@ -1,15 +1,21 @@
 div.container
 {
 	width:100%;
-	margin:0px;
-	border:1px solid gray;
+	margin:0px;	
 	line-height:150%;
 }
 div.header,div.footer
 {
 	padding:0.5em;
 	color:white;
-	background-color:gray;
+	background:#869B74;
+	clear:left;
+}
+div.footer
+{
+	padding:0.5em;
+	color:grey;
+	background:#FFEBCC;
 	clear:left;
 }
 h1.header, h2.header, h3.header
@@ -24,7 +30,8 @@ div.left
 	width:120px;
 	margin:0;
 	padding:1em;
-	background: #0E77AE
+	/*background: #0E77AE*/
+	background: #376956
 }
 div.content
 {

@@ -1,0 +1,5 @@
+graft weblite/templates
+graft weblite/static
+graft weblite/js
+graft weblite/pages
+include weblite/db/init.sql

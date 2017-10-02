@@ -4,8 +4,10 @@ import os
 import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort,\
 render_template, flash, send_from_directory
+# from flask_restful import Resource, Api
 
 app = Flask(__name__)
+# app = Api(app)
 app.config.from_object(__name__)
 
 app.config.update(dict(

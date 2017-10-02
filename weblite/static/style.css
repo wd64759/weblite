@@ -4,20 +4,26 @@ div.container
 	margin:0px;	
 	line-height:150%;
 }
-div.header,div.footer
+div.header
 {
 	padding:0.5em;
-	color:white;
-	background:#869B74;
+	color:grey;
+	/*background:#869B74;*/
 	clear:left;
 }
 div.footer
 {
-	padding:0.5em;
-	color:grey;
-	background:#FFEBCC;
+	/*padding:0.5em;*/
+	color:white;
+	background:#869B74;
 	clear:left;
 }
+div.footer span {
+	display: block;
+	margin: auto;
+	border: solid;
+}
+
 h1.header, h2.header, h3.header
 {
 	padding:0;
@@ -28,17 +34,20 @@ div.left
 {
 	float:left;
 	width:120px;
-	margin:0;
-	padding:1em;
+	height: 92%;
+	margin:1px;
+	padding:0;
+	/*border: solid;*/
 	/*background: #0E77AE*/
 	background: #376956
 }
 div.content
 {
 	margin:auto;
+	height: 92%;
 	float:left;
 	border-left:1px solid gray;
-	padding:1em;
+	padding:5em, 0, 0, 0;
 	/*border: solid;*/
 }
 #menu {

@@ -113,3 +113,6 @@ class Features(Model):
 	status = Column(String(10))
 	tag = Column(String(30))
 	last_upd = Column(DateTime)
+
+if __name__ == '__main__':
+	print('ok.')

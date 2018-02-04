@@ -1,5 +1,7 @@
 #g is a variable associated with current app context
-from flask import Flask, session, g, render_template, send_from_directory
+from flask import Flask, request, session, g, redirect, url_for, abort,\
+render_template, flash, send_from_directory
+import sqlite3
 
 app = Flask(__name__)
 # app = Api(app)
@@ -24,7 +26,7 @@ def send_js(path):
 
 def connect_db():
 	""" Connects to the specific database."""
-	rv = sqlite3.connect(app.config['DATABASE'])
+	rv = sqlite3.connect(app.config['DATABASE_URI'])
 	rv.row_factory = sqlite3.Row
 	return rv
 
@@ -37,7 +39,7 @@ def get_db():
 def close_db(error):
 	"""close and release resource when app is down"""
 	if hasattr(g, 'mydb'):
-		g.mydb.close()	
+		g.mydb.close()
 
 
 def init_db():
@@ -76,9 +78,9 @@ def login():
 	print('login page request')
 	error = None
 	if request.method == 'POST':
-		if request.form['username'] != app.config['USERNAME']:
+		if request.form['username'] != app.config['SECRET_KEY']:
 			error = 'Invalid username'
-		elif request.form['password'] != app.config['PASSWORD']:
+		elif request.form['password'] != app.config['SECRET_CODE']:
 			error = 'Invalid password'
 		else:
 			session['login_id'] = True
@@ -91,4 +93,4 @@ def logout():
 	session.pop('logged_in', None)
 	flash('You logged out')
 	return redirect(url_for('show_entries'))
-	
+

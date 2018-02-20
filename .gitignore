@@ -1,2 +1,5 @@
 __pycache*
 *.db
+.idea
+.pytest_cache
+venv

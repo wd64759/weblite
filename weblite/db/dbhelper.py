@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, MetaData
+from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 from weblite import app
@@ -9,10 +9,10 @@ db_session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind
 
 def init_db():
     """ create tables inherited from base model """
-    from weblite.db.staffmodel import Staff
-    metadata = MetaData()
-    metadata.create_all(engine)
+    from weblite.db.app_model import Staff, Event, BCEHist, Feedback, Features, ReleaseHist
+    from weblite.db.basemodel import BaseModel
+    BaseModel.metadata.create_all(engine, checkfirst=True)
+
 
 if __name__ == '__main__':
     init_db()
-

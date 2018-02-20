@@ -6,8 +6,8 @@ DEBUG = False
 
 SECRET_KEY = 'admin'
 SECRET_CODE= 'admin'
-DATABASE_URI = os.path.join(_basedir, 'weblite.db')
-DATABASE_CONNECT_OPTIONS = {}
+DB_URI = 'sqlite:////{}'.format(os.path.join(_basedir, 'weblite.db'))
+DB_CONN_OPTIONS = {}
 
 # remove the reference of OS. is it necessary ?
 del os

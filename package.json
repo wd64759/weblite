@@ -1,0 +1,30 @@
+{
+  "name": "weblite",
+  "version": "0.0.1",
+  "description": "lite portal",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wd64759/weblite.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "wei dong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wd64759/weblite/issues"
+  },
+  "homepage": "https://github.com/wd64759/weblite#readme"
+}

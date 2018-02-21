@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-<div class="container" ng-app="lite_app" ng-controller="liteCtrl as app">
+<div class="container" ng-app="lite_app" ng-controller="liteCtrl as ctrl">
     <div class="left">
         <ul id="menu">
             <li><a href="#" ng-click="app.route('staffs')">staffs</a></li>
@@ -20,11 +20,19 @@
         </ul>
     </div>
     <div class="content">
+        <table>
+            <tr ng-repeat-start="note in ctrl.notes">
+                <td ng-bind="note.label"></td>
+            </tr>
+            <tr ng-repeat-end>
+                <td>Done: <span ng-bind="note.done"></span></td>
+            </tr>
+        </table>
         {% block body %}{% endblock %}
     </div>
     <div class="footer"><span>Copyright 2018 by XX</span></div>
 </div>
-<script src="/static/js/libs/1.4.6/angular.min.js"></script>
+<script src="/static/js/lib/angularjs/1.4.6/angular.js"></script>
 <script src="/static/js/app/main.js"></script>
 </body>
 </html>

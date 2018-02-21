@@ -19,3 +19,19 @@
 
 * SqliteStudio
 
+### Unit Test
+* Setup Karma and Jasmine
+> npm init // to create the package.json file
+> sudo npm install -g karma-cli // global repo
+> npm install karma //local repo
+> npm install jasmine-core
+> npm install karma-jasmine karma-chrome-launcher
+* Create the Karma config file for project
+> karma init // update the base, files accordingly
+* Run karma framework
+> karma start
+* Re-run test manually
+> karma run
+
+
+

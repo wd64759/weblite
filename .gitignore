@@ -1,1 +1,6 @@
 __pycache*
+*.db
+.idea
+.pytest_cache
+venv
+node_modules

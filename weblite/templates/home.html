@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lite Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container" ng-app="lite_app" ng-controller="liteCtrl as ctrl">
+    <div class="left">
+        <ul id="menu">
+            <li><a href="#" ng-click="app.route('staffs')">staffs</a></li>
+            <li><a href="#" ng-click="app.route('staffs')">events</a></li>
+            <li><a href="#" ng-click="app.route('staffs')">calendar</a></li>
+            <li><a href="#" ng-click="app.route('staffs')">dataExplore</a></li>
+            <li><a href="#" ng-click="app.route('staffs')">notes</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <table>
+            <tr ng-repeat-start="note in ctrl.notes">
+                <td ng-bind="note.label"></td>
+            </tr>
+            <tr ng-repeat-end>
+                <td>Done: <span ng-bind="note.done"></span></td>
+            </tr>
+        </table>
+        {% block body %}{% endblock %}
+    </div>
+    <div class="footer"><span>Copyright 2018 by XX</span></div>
+</div>
+<script src="/static/js/lib/angularjs/1.4.6/angular.js"></script>
+<script src="/static/js/app/main.js"></script>
+</body>
+</html>

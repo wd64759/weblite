@@ -1,9 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
+import os
+_basedir = os.path.abspath(os.path.dirname(__file__))
 
-from weblite import app
-
-engine = create_engine(app.config['DB_URI'], convert_unicode=True, echo=True, **app.config['DB_CONN_OPTIONS'])
+DB_URI = 'sqlite:////{}'.format(os.path.join(_basedir, 'weblite.db'))
+engine = create_engine(DB_URI, convert_unicode=True, echo=True)
 db_session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
 
 

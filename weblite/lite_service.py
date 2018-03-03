@@ -3,6 +3,8 @@ from flask_restful import Resource, Api, reqparse
 
 import json
 import logging
+from weblite.db.dbhelper import db_session
+from weblite.db.app_model import Staff
 
 lite_service = Blueprint('lite_router', __name__, url_prefix='/restful')
 lite_api = Api(lite_service)
@@ -14,12 +16,20 @@ get_params.add_argument('id', type=int, dest='id')
 post_params = reqparse.RequestParser()
 post_params.add_argument('staff', required=True, help='update/create operations are allowed based on json object')
 
+_EMPTY_RESULT = {}
 
 class LoginService(Resource):
 
+    logger = logging.getLogger('LoginService')
+    session = db_session
+
     def get(self):
-        # TODO: get menu list and all elements for page rendering
-        pass
+        self.logger.info('receive the get request')
+        staffs = self.session.query(Staff).orderby(Staff.name).limit(100).all()
+        if len(staffs == 0):
+            return _EMPTY_RESULT
+
+
 
 
 class StaffsService(Resource):

@@ -1,4 +1,4 @@
-describe('Controller:LiteCtrl', function(){
+describe('ABC:LiteCtrl', function(){
 
     beforeEach(module('lite_app'));
 

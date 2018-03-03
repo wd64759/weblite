@@ -12,10 +12,10 @@ import logging
 import sqlite3
 
 from flask import Flask, g, render_template, send_from_directory
-from weblite.lite_service import lite_service
 
 # over all setting for logging and other environment related context
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 # app = Api(app)
@@ -23,7 +23,9 @@ app.config.from_object('webliteconfig')
 # to load different property files by the given %env% variable in run time
 env_loaded = app.config.from_envvar('env', silent=True)
 if not env_loaded:
-    logging.warning('the int configuration is NOT loaded from the $env parameter')
+    logger.warning('the int configuration is NOT loaded from the $env parameter')
+
+
 
 
 @app.errorhandler(404)
@@ -69,5 +71,7 @@ def init_db_cmd():
 def home():
     return render_template('home.html')
 
+
+from weblite.lite_service import lite_service
 
 app.register_blueprint(lite_service)

@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+}
+ul {
+    list-style: none;
+}
+img, a img {
+    border: none;
+}
+a {
+    text-decoration: none;
+}
+div.top {
+    background: antiquewhite;
+    width: 1000px;
+    height: 80px;
+    margin: auto;
+}
+div.top .title {
+    float: left;
+    width: 100px;
+    top: 50%;
+    position: relative;
+}
+div.top .toolkit {
+    float: left;
+    width: 900px;
+    top: 50%;
+    position: relative;
+}
+
+div.top .toolkit .search {
+    float: left;
+    margin-right: auto;
+    width: 120px;
+    background: red;
+}
+
+div.top .toolkit .profile {
+    margin-left: auto;
+    width: 180px;
+    background: blue;
+}

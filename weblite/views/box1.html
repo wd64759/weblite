@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background: red;
+            margin: 0 auto;
+            padding: 20px;
+            border: 20px double black;
+            /* box-sizing: content-box; */
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav ul {
+            list-style: none;
+        }
+
+        .nav li {
+            width: calc(25% - 2px);
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: white;
+            background: blue;
+            float: left;
+            border: 1px solid black
+        }
+
+    </style>
+    <script>
+        window.onload = function(){
+            var box = document.querySelector('.box');
+            if(box) {
+                alert(box.offsetWidth);
+            };
+        };
+    </script>
+    <title>box.1</title>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+
+    </div>
+</body>
+</html>

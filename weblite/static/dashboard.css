@@ -1,10 +1,5 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    font-size: 14px;
-}
-ul {
-    list-style: none;
+body {
+    background: silver;
 }
 img, a img {
     border: none;
@@ -12,35 +7,69 @@ img, a img {
 a {
     text-decoration: none;
 }
-div.desktop {
+
+a, .sidebar {
+    color: #eee;
+}
+input {
+    /*width: 25px;*/
+    height: 25px;
+    border-radius: 10px;
+    transition: all 0.15s ease-in;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.desktop {
     width: 1200px;
     margin: auto;
-    background: black;
 }
-div.sidebar {
+.sidebar {
     float: left;
+    background: #454545;
     width: 140px;
     margin: 0px;
-    background:  silver;
-    height: 800px;
+    height: 837px;
 }
-div.content {
+.sidebar .nav > * {
+    line-height: 1.8;
+    font-weight: 700;
+}
+.sidebar .nav ul {
+    list-style: none;
+    text-align: left;
+    padding: 0px;
+}
+.sidebar .nav ul li {
+    display: inline;
+}
+.sidebar .nav a {
+    display: block;
+    padding-left: 20px;
+}
+.sidebar .nav a:hover {
+    color: green;
+    -webkit-transition: color 200ms;
+    -o-transition: color 200ms;
+    transition: color 200ms;
+}
+.content {
     float: right;
     width: 1060px;
     background:  bisque;
 }
-div.content div.top {
+.content .top {
     height: 45px;
     background: #673AB7;
     margin: auto;
 }
-div.content div.top div.title {
-    float: left;
-    width: 100px;
-    top: 50%;
-    position: relative;
+.desktop .sidebar .logo {
+    padding: 10px 20px;
+    font-size: 28px;
+    margin: auto;
+    text-align: center;
+    /*display: inline-block;*/
 }
-div.top .toolkit {
+.top .toolkit {
     float: left;
     width: 100%;
     position: relative;
@@ -48,75 +77,72 @@ div.top .toolkit {
     display: flex;
     justify-content: space-between;
 }
-div.content div.subtitle {
+.content .subtitle {
     width: 100%;
     height: 60px;
     background:  sandybrown;
 }
-div.content div.board {
+.content .board {
     background: red;
     padding: 12px;
     box-sizing: border-box;
 }
-div.content div.board div.static {
+.content .board .static {
     background: silver;
     height: 120px;
     border: 2px solid black;
     display: flex;
     justify-content: center;
 }
-div.content div.board div.data_board {
+.content .board .data_board {
     height: 240px; 
     background: #40e0d0;
     display: flex;
 }
-div.content div.board div.static div.coding {
+.content .board .static .coding {
     background: blue;
     flex: 1;
 }
-div.content div.board div.static div.modules {
+.content .board .static .modules {
     background: yellow;
     flex: 1;
 }
-div.content div.board div.static div.opening {
+.content .board .static .opening {
     background: green;
     flex: 1;
 }
-div.content div.board div.diagram {
+.content .board .diagram {
     margin: auto;
     background: snow;
     height: 340px;
     border: 2px solid blue;
     display: flex;
 }
-div.content div.board div.diagram div.ut_pad {
+.content .board .diagram .ut_pad {
     background: silver;
     flex: 1;
 }
-div.content div.board div.diagram div.bce_pad {
+.content .board .diagram .bce_pad {
     background: #795548;
     flex: 1;
 }
-div.content div.board div.diagram div.sprint_pad {
+.content .board .diagram .sprint_pad {
     background: #2e8b57;
     flex: 1;
 }
-div.content div.board div.data_board div.bow {
+.content .board .data_board .bow {
     background: yellow;
     flex: 2;
 }
-div.content div.board div.data_board div.tasks {
+.content .board .data_board .tasks {
     background: green;
     flex: 3;
 }
-div.top .toolkit .search {
+.top .toolkit .search {
     width: 220px;
-    background: red;
+    margin: auto 0
 }
-div.top .toolkit .profile {
+.top .toolkit .profile {
     width: 340px;
     background: blue;
 }
-
-
-div.content div.

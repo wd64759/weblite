@@ -6,12 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lite Home</title>
+    <link rel="stylesheet" href="/static/normalize.css">
     <link rel="stylesheet" href="/static/dashboard.css">
 </head>
 <body>
 <div class="desktop" ng-app="lite_app" ng-controller="liteCtrl as ctrl">
     <div class="sidebar">
-        <div class="title">Lite Work</div>
+        <div class="logo">Lite</div>
         <div class="nav">            
             <ul id="menu">
                 <li><a href="#" ng-click="app.route('staffs')">Reports</a></li>
@@ -25,8 +26,8 @@
     <div class="content">
         <div class="top">
             <div class="toolkit">
-            <div class="search">search box</div>
-            <div class="profile">my profile</div>
+                <div class="search"><input type="search" id="lookup"/></div>
+                <div class="profile">my profile</div>
             </div>
         </div>
         <div class="board">

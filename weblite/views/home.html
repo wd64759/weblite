@@ -10,15 +10,9 @@
 </head>
 <body>
 <div class="desktop" ng-app="lite_app" ng-controller="liteCtrl as ctrl">
-    <div class="top">
+    <div class="sidebar">
         <div class="title">Lite Work</div>
-        <div class="toolkit">
-            <div class="search">search box</div>
-            <div class="profile">my profile</div>
-        </div>
-    </div>
-    <div class="content">
-        <div class="nav">
+        <div class="nav">            
             <ul id="menu">
                 <li><a href="#" ng-click="app.route('staffs')">Reports</a></li>
                 <li><a href="#" ng-click="app.route('staffs')">Performance</a></li>
@@ -27,8 +21,16 @@
                 <li><a href="#" ng-click="app.route('staffs')">Admin</a></li>
             </ul>
         </div>
+    </div>
+    <div class="content">
+        <div class="top">
+            <div class="toolkit">
+            <div class="search">search box</div>
+            <div class="profile">my profile</div>
+            </div>
+        </div>
         <div class="board">
-            <div class="subtitle">subtitle</div>
+            <div class="subtitle">Dashboard</div>
             <div class="static">
                 <div class="coding">coding static</div>
                 <div class="modules">modules static</div>

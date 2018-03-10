@@ -12,13 +12,29 @@ img, a img {
 a {
     text-decoration: none;
 }
-div.top {
-    background: antiquewhite;
-    width: 1000px;
-    height: 80px;
+div.desktop {
+    width: 1200px;
+    margin: auto;
+    background: black;
+}
+div.sidebar {
+    float: left;
+    width: 140px;
+    margin: 0px;
+    background:  silver;
+    height: 800px;
+}
+div.content {
+    float: right;
+    width: 1060px;
+    background:  bisque;
+}
+div.content div.top {
+    height: 45px;
+    background: #673AB7;
     margin: auto;
 }
-div.top .title {
+div.content div.top div.title {
     float: left;
     width: 100px;
     top: 50%;
@@ -26,20 +42,81 @@ div.top .title {
 }
 div.top .toolkit {
     float: left;
-    width: 900px;
-    top: 50%;
+    width: 100%;
     position: relative;
+    height:  100%;
+    display: flex;
+    justify-content: space-between;
 }
-
+div.content div.subtitle {
+    width: 100%;
+    height: 60px;
+    background:  sandybrown;
+}
+div.content div.board {
+    background: red;
+    padding: 12px;
+    box-sizing: border-box;
+}
+div.content div.board div.static {
+    background: silver;
+    height: 120px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+div.content div.board div.data_board {
+    height: 240px; 
+    background: #40e0d0;
+    display: flex;
+}
+div.content div.board div.static div.coding {
+    background: blue;
+    flex: 1;
+}
+div.content div.board div.static div.modules {
+    background: yellow;
+    flex: 1;
+}
+div.content div.board div.static div.opening {
+    background: green;
+    flex: 1;
+}
+div.content div.board div.diagram {
+    margin: auto;
+    background: snow;
+    height: 340px;
+    border: 2px solid blue;
+    display: flex;
+}
+div.content div.board div.diagram div.ut_pad {
+    background: silver;
+    flex: 1;
+}
+div.content div.board div.diagram div.bce_pad {
+    background: #795548;
+    flex: 1;
+}
+div.content div.board div.diagram div.sprint_pad {
+    background: #2e8b57;
+    flex: 1;
+}
+div.content div.board div.data_board div.bow {
+    background: yellow;
+    flex: 2;
+}
+div.content div.board div.data_board div.tasks {
+    background: green;
+    flex: 3;
+}
 div.top .toolkit .search {
-    float: left;
-    margin-right: auto;
-    width: 120px;
+    width: 220px;
     background: red;
 }
-
 div.top .toolkit .profile {
-    margin-left: auto;
-    width: 180px;
+    width: 340px;
     background: blue;
 }
+
+
+div.content div.

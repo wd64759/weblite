@@ -12,7 +12,6 @@ a, .sidebar {
     color: #eee;
 }
 input {
-    /*width: 25px;*/
     height: 25px;
     border-radius: 10px;
     transition: all 0.15s ease-in;
@@ -27,7 +26,7 @@ input {
 }
 .sidebar {
     float: left;
-    background: #454545;
+    background: #006699;
     width: 140px;
     margin: 0px;
     height: 837px;
@@ -57,11 +56,11 @@ input {
 .content {
     float: right;
     width: 1060px;
-    background:  bisque;
+    background: #006699;
 }
 .content .top {
-    height: 45px;
-    background: #673AB7;
+    height: 55px;
+    background: #006699;
     margin: auto;
 }
 .desktop .sidebar .logo {
@@ -101,63 +100,51 @@ input {
 
 .content .subtitle {
     width: 100%;
-    height: 60px;
-    background:  sandybrown;
+    height: 25px;
+    font-weight: 700;
 }
 .content .board {
-    background: red;
+    background: snow;
     padding: 12px;
     box-sizing: border-box;
+    border-radius: 1em 0 0 0;
 }
 .content .board .static {
-    background: silver;
     height: 120px;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
 }
 .content .board .data_board {
-    height: 240px; 
-    background: #40e0d0;
+    height: 240px;
     display: flex;
 }
 .content .board .static .coding {
-    background: blue;
     flex: 1;
 }
 .content .board .static .modules {
-    background: yellow;
     flex: 1;
 }
 .content .board .static .opening {
-    background: green;
     flex: 1;
 }
 .content .board .diagram {
     margin: auto;
-    background: snow;
     height: 340px;
-    border: 2px solid blue;
     display: flex;
 }
 .content .board .diagram .ut_pad {
-    background: silver;
     flex: 1;
 }
 .content .board .diagram .bce_pad {
-    background: #795548;
     flex: 1;
 }
 .content .board .diagram .sprint_pad {
-    background: #2e8b57;
     flex: 1;
 }
 .content .board .data_board .bow {
-    background: yellow;
     flex: 2;
 }
 .content .board .data_board .tasks {
-    background: green;
     flex: 3;
 }
 .top .toolkit .search {
@@ -166,6 +153,26 @@ input {
     position: relative;
 }
 .top .toolkit .profile {
-    width: 340px;
-    background: blue;
+    height:  100%;
+    padding: 0 25px;
+    display:  flex;
+    align-items:  center;
+}
+.top .toolkit .alert {
+    display: block;
+    background: url(/static/icon/tones.png) no-repeat center;
+    background-size: 28px 28px;
+    background-position:  center;
+    height: 40px;
+    width: 40px;
+    /*filter: drop-shadow(rgb(299, 99, 99) 2px 2px);*/
+}
+.top .toolkit .user {
+    display: block;
+    background: url(/static/icon/user.png) no-repeat center;
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
 }

@@ -109,42 +109,39 @@ input {
     box-sizing: border-box;
     border-radius: 1em 0 0 0;
 }
-.content .board .static {
+.content .board .panel {
     height: 120px;
     display: flex;
     justify-content: center;
 }
-.content .board .data_board {
-    height: 240px;
-    display: flex;
-}
-.content .board .static .coding {
+.content .board .panel .utest {
     flex: 1;
 }
-.content .board .static .modules {
+.content .board .panel .tdebt {
     flex: 1;
 }
-.content .board .static .opening {
+.content .board .panel .customize {
     flex: 1;
 }
-.content .board .diagram {
+.content .board .data {
     margin: auto;
     height: 340px;
     display: flex;
 }
-.content .board .diagram .ut_pad {
+.content .board .data .filter {
     flex: 1;
 }
-.content .board .diagram .bce_pad {
-    flex: 1;
-}
-.content .board .diagram .sprint_pad {
-    flex: 1;
-}
-.content .board .data_board .bow {
+.content .board .data .team {
     flex: 2;
 }
-.content .board .data_board .tasks {
+.content .board .release_board {
+    height: 240px;
+    display: flex;
+}
+.content .board .release_board .calendar {
+    flex: 2;
+}
+.content .board .release_board .details {
     flex: 3;
 }
 .top .toolkit .search {

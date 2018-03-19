@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lite Home</title>
     <link rel="stylesheet" href="/static/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/slick-default-theme.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/slick.grid.css">
     <link rel="stylesheet" href="/static/dashboard.css">
 </head>
 <body>
@@ -44,8 +47,14 @@
                 <div class="customize">customized panel</div>
             </div>
             <div class="data">
-                <div class="filter">filter pad</div>
-                <div class="team">team panel</div>
+                <div class="filter">
+                    <ul>
+                        <li ng-repeat="x in ctrl.notes">
+                            <span>{{x.label}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="myteam" class="team">team panel</div>
             </div>
             <div class="release_board">
                 <div class="calendar">book of work table</div>
@@ -55,7 +64,13 @@
     </div>
 
 </div>
+<script type="text/javascript" src="/static/js/lib/jquery/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="/static/js/lib/jquery/jquery.event.drag-2.2.js"></script>
+<script type="text/javascript" src="/static/js/lib/slick.core.js"></script>
+<script type="text/javascript" src="/static/js/lib/slick.grid.js"></script>
+
 <script src="/static/js/lib/angularjs/1.4.6/angular.js"></script>
 <script src="/static/js/app/main.js"></script>
+
 </body>
 </html>

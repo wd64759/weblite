@@ -130,9 +130,12 @@ input {
 }
 .content .board .data .filter {
     flex: 1;
+    border:  1px solid #d4d4d4;
+    margin: 0 5px 0 0;
 }
 .content .board .data .team {
-    flex: 2;
+    flex: 4;
+    font-size: 8pt;
 }
 .content .board .release_board {
     height: 240px;

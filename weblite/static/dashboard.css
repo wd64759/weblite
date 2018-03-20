@@ -18,7 +18,7 @@ input {
     vertical-align: middle;
     margin-left: 10px;
     line-height:  22px;
-    width:  160px;
+    /* width:  160px; */
 }
 .desktop {
     width: 1200px;
@@ -35,13 +35,31 @@ input {
     line-height: 1.8;
     font-weight: 700;
 }
-.sidebar .nav ul {
+.sidebar .nav ul, 
+.content .board .data .filter ul {
     list-style: none;
     text-align: left;
     padding: 0px;
+    margin: 5px 0;
 }
-.sidebar .nav ul li {
-    display: inline;
+.sidebar .nav ul li, 
+.content .board .data .filter ul li {
+    display: flex;
+}
+.content .board .data .filter ul li div {
+    display: flex;
+    flex: 1;
+}
+.content .board .data .filter > span {
+    margin: 0 10px;
+    width: 100%;
+    line-height: 25px;
+    font-weight: 500;
+    font-size: large
+}
+.content .board .data .filter .cell span {
+    display: block;
+    margin: 0 5px;
 }
 .sidebar .nav a {
     display: block;
@@ -135,7 +153,7 @@ input {
 }
 .content .board .data .team {
     flex: 4;
-    font-size: 8pt;
+    font-size: 9pt;
 }
 .content .board .release_board {
     height: 240px;

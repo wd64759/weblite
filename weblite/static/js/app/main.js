@@ -1,11 +1,35 @@
 angular.module('lite_app', [])
 .controller('liteCtrl', [function(){
     var self = this;
-    self.notes = [
-        {id: 1, label: 'First Note', done: false},
-        {id: 2, label: 'Second Note', done: false},
-        {id: 3, label: 'Third Note', done: true}
+
+    self.staff_fields = [
+        {id: 1, label: 'name', checked: true},
+        {id: 2, label: 'clevel', checked: true},
+        {id: 3, label: 'team', checked: true},
+        {id: 4, label: 'manager', checked: true},
+        {id: 5, label: 'join_dt', checked: true},
+        {id: 6, label: 'status', checked: false},
+        {id: 7, label: 'salary', checked: false},
+        {id: 8, label: 'pa', checked: false}
     ];
+    self.nav_menu_items = [
+    	{label: 'Reports', url: '#'},
+    	{label: 'Performance', url: '#'},
+    	{label: 'Data Dict', url: '#'},
+    	{label: 'Notes', url: '#'},
+    	{label: 'Users', url: '#'}
+    ];
+
+    self.chunk = function(arr, size) {
+    	var newArr = [];
+    	for (var i=0; i<arr.length; i+=size) {
+    		newArr.push(arr.slice(i, i+size))
+    	}
+    	return newArr;
+    };
+
+
+    self.staff_fields_filter = self.chunk(self.staff_fields, 2);
 }]);
 
 var columns = [

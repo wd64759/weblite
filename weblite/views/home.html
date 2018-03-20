@@ -18,11 +18,9 @@
         <div class="logo">Lite</div>
         <div class="nav">            
             <ul id="menu">
-                <li><a href="#" ng-click="app.route('staffs')">Reports</a></li>
-                <li><a href="#" ng-click="app.route('staffs')">Performance</a></li>
-                <li><a href="#" ng-click="app.route('staffs')">Data Dict</a></li>
-                <li><a href="#" ng-click="app.route('staffs')">Notes</a></li>
-                <li><a href="#" ng-click="app.route('staffs')">Admin</a></li>
+                <li ng-repeat="menu_item in ctrl.nav_menu_items">
+                    <a href="{{menu_item.url}}"><span ng-bind="menu_item.label"></span></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -48,9 +46,13 @@
             </div>
             <div class="data">
                 <div class="filter">
+                    <span>Field Selection</span>
                     <ul>
-                        <li ng-repeat="x in ctrl.notes">
-                            <span>{{x.label}}</span>
+                        <li ng-repeat="staff_fields in ctrl.staff_fields_filter">
+                            <div class="cell" ng-repeat="staff_field in staff_fields">
+                                <input type="checkbox" ng-checked="staff_field.checked">
+                                <span ng-bind="staff_field.label"></span>
+                            </div>
                         </li>
                     </ul>
                 </div>

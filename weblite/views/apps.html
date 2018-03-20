@@ -46,11 +46,11 @@
             </div>
             <div class="data">
                 <div class="filter">
-                    <span>Field Selection</span>
+                    <span>Custom Filter</span>
                     <ul>
                         <li ng-repeat="staff_fields in ctrl.staff_fields_filter">
                             <div class="cell" ng-repeat="staff_field in staff_fields">
-                                <input type="checkbox" ng-checked="staff_field.checked">
+                                <input type="checkbox" ng-checked="staff_field.checked" ng-click="ctrl.updateGrid($event, staff_field.id)">
                                 <span ng-bind="staff_field.label"></span>
                             </div>
                         </li>

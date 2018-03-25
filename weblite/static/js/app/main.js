@@ -1,5 +1,5 @@
 angular.module('lite_app', [])
-.controller('liteCtrl', [function(){
+.controller('liteCtrl', ['D3Service', function(D3Service){
     var self = this;
 
     self.staff_fields = [
@@ -62,6 +62,17 @@ angular.module('lite_app', [])
 
     self.staff_fields_filter = self.chunk(self.staff_fields, 2);
     self.slickgrid = self.init_team_data("#myteam");
+
+    D3Service.show();
+
+}]).factory('D3Service', ['$log', function($log){
+    var d = d3;
+    return {
+        show: function() {
+            $log.log('call D3 service');
+            d.select('.utest').style('background', 'black');
+        }
+    }
 }]);
 
 
